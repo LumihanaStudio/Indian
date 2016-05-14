@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by KOHA_CLOUD on 16. 5. 12..
  */
 public class DonutUtils {
-    public static String API_KEY = "apikey";
+    public static String API_KEY = "apikey", USER_ID = "userid", USER_PASSWORD = "userpassword", ACCOUNTTYPE = "accounttype", NICKNAME = "nickname";
     Context context;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -25,19 +25,26 @@ public class DonutUtils {
 
     public void setPref(String type, String value) {
         editor.putString(type, value);
+        editor.commit();
     }
 
     public void setPref(String type, boolean value) {
         editor.putBoolean(type, value);
+        editor.commit();
+
     }
 
 
     public void setPref(String type, int value) {
         editor.putInt(type, value);
+        editor.commit();
+
     }
 
     public void setPref(String type, float value) {
         editor.putFloat(type, value);
+        editor.commit();
+
     }
 
     public String getString(String key) {
@@ -60,7 +67,7 @@ public class DonutUtils {
     public static NetworkService getInstance() {
         NetworkService networkService;
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://edcan.kr")
+                .baseUrl("http://iwin247.net")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         networkService = retrofit.create(NetworkService.class);

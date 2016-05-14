@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.edcan.donutpunch.activity.GameInfoViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/game_info_image"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/game_view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minHeight="?android:attr/actionBarSize" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/gameview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="The Blinding of ISAAC"
+                android:textColor="#FFF"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/gameview_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Released in 1970.01.01 "
+                android:textColor="#66FFFFFF" />
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:text="이 게임에 등록되어 있는 태그"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <kr.edcan.donutpunch.utils.AutoLineLayout
+                android:id="@+id/tag_autoline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+            </kr.edcan.donutpunch.utils.AutoLineLayout>
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:text="이 게임에 대해"
+
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/gameview_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="The Binding of Isaac is a randomly generated action RPG shooter with heavy Rogue-like Nim I Am Very Confused"
+                android:textColor="#66fffFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
